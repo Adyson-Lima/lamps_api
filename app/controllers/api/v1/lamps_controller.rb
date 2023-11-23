@@ -1,6 +1,6 @@
 class Api::V1::LampsController < ApplicationController
 
-  before_action :set_lamp, only: %i[show] #show update destroy
+  before_action :set_lamp, only: %i[show update] #show update destroy
 
   def index
     @lamps = Lamp.all
@@ -15,6 +15,14 @@ class Api::V1::LampsController < ApplicationController
     @lamp = Lamp.new(lamp_params)
     if @lamp.save
       render json: @lamp, status: :created, location: api_v1_lamp_url(@lamp)
+    else
+      render json: @lamp.errors, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    if @lamp.update(lamp_params)
+      render json: @lamp
     else
       render json: @lamp.errors, status: :unprocessable_entity
     end
