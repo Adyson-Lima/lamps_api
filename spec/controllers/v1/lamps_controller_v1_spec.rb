@@ -37,4 +37,13 @@ RSpec.describe Api::V1::LampsController, type: :controller do
     end
   end
 
+  describe "DELETE /api/v1/lamps/id" do
+    it "Consegue excluir um lamp e retornar status 204?" do
+      lamp = Lamp.last
+      delete :destroy, params: {id: lamp.id}
+      expect(Lamp.all).not_to include(lamp)
+      expect(response).to have_http_status(204)
+    end
+  end
+
 end
