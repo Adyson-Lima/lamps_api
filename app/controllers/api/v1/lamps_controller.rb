@@ -1,10 +1,14 @@
 class Api::V1::LampsController < ApplicationController
 
-  before_action :set_lamp, only: %i[] #show update destroy
+  before_action :set_lamp, only: %i[show] #show update destroy
 
   def index
     @lamps = Lamp.all
     render json: @lamps
+  end
+
+  def show
+    render json: @lamp
   end
 
 private
