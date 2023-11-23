@@ -11,6 +11,15 @@ class Api::V1::LampsController < ApplicationController
     render json: @lamp
   end
 
+  def create
+    @lamp = Lamp.new(lamp_params)
+    if @lamp.save
+      render json: @lamp, status: :created, location: api_v1_lamp_url(@lamp)
+    else
+      render json: @lamp.errors, status: :unprocessable_entity
+    end
+  end
+
 private
 
 def set_lamp
