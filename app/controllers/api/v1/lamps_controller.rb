@@ -1,6 +1,6 @@
 class Api::V1::LampsController < ApplicationController
 
-  before_action :set_lamp, only: %i[show update] #show update destroy
+  before_action :set_lamp, only: %i[show update destroy] #show update destroy
 
   def index
     @lamps = Lamp.all
@@ -26,6 +26,10 @@ class Api::V1::LampsController < ApplicationController
     else
       render json: @lamp.errors, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @lamp.destroy!
   end
 
 private
