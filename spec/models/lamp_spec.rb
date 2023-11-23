@@ -11,6 +11,11 @@ RSpec.describe Lamp, type: :model do
       expect(@lamp.lamp_model).to eq("lampada de filamento")
     end
 
+    it "description consegue ser preenchido?" do
+      @lamp.description = ""
+      expect(@lamp.description).to eq("lampada antiga")
+    end
+
   end
 
 end
