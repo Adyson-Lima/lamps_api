@@ -28,4 +28,13 @@ RSpec.describe Api::V1::LampsController, type: :controller do
     end
   end
 
+  describe "PATCH /api/v1/lamps/id" do
+    it "Consegue atualizar uma lamp e retornar status 200?" do
+      lamp = Lamp.last
+      patch :update, params: {lamp: {lamp_model: "mercurio", description: "lampada comum"}, id: lamp.id}
+      expect(response.body).to include_json(lamp_model: "mercurio")
+      expect(response).to have_http_status(200)
+    end
+  end
+
 end
