@@ -12,4 +12,12 @@ RSpec.describe Api::V1::LampsController, type: :controller do
     end
   end
 
+  describe "GET /api/v1/lamps/id" do
+    it "Consegue listar um lamp especifico e retornar status 200?" do
+      get :show,params: {id: @lamp.id}
+      expect(response.body).to include_json(id: @lamp.id)
+      expect(response).to have_http_status(200)
+    end
+  end
+
 end
