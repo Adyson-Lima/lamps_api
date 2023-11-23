@@ -288,38 +288,20 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_2" class="passed">Teste de preenchimento do model Lamp</dt>
     <script type="text/javascript">moveProgressBar('33.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">lamp_model consegue ser preenchido?</span><span class='duration'>0.02777s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">lamp_model consegue ser preenchido?</span><span class='duration'>0.02500s</span></dd>
     <script type="text/javascript">moveProgressBar('66.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">description consegue ser preenchido?</span><span class='duration'>0.00088s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">description consegue ser preenchido?</span><span class='duration'>0.00072s</span></dd>
   </dl>
 </div>
 <div id="div_group_3" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_3" class="passed">teste de validação do model Lamp</dt>
-    <script type="text/javascript">makeRed('rspec-header');</script>
-    <script type="text/javascript">makeRed('div_group_3');</script>
-    <script type="text/javascript">makeRed('example_group_3');</script>
     <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example failed">
-      <span class="failed_spec_name">Lamp valido com campos obrigatorios preenchidos?</span>
-      <span class="duration">1.71393s</span>
-      <div class="failure" id="failure_1">
-        <div class="message"><pre>  Failure/Error: expect(@lamp).to be_valid
-    expected #&lt;Lamp id: nil, lamp_model: &quot;&quot;, description: &quot;&quot;, created_at: nil, updated_at: nil&gt; to be valid, but got errors: Lamp model can&#39;t be blank, Description can&#39;t be blank
-  # ./spec/models/lamp_spec.rb:26:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-        <div class="backtrace"><pre>./spec/models/lamp_spec.rb:26:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-    <pre class="ruby"><code><span class="linenum">24</span>      @lamp.lamp_model = ""
-<span class="linenum">25</span>      @lamp.description = ""
-<span class="offending"><span class="linenum">26</span>      expect(@lamp).to be_valid</span>
-<span class="linenum">27</span>    end
-<span class="linenum">28</span>
-<span class="linenum">29</span><span class="comment"># Install the coderay gem to get syntax highlighting</span></code></pre>
-      </div>
-    </dd>
+    <dd class="example passed"><span class="passed_spec_name">Lamp valido com campos obrigatorios preenchidos?</span><span class='duration'>0.00077s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>1.75199 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "3 examples, 1 failure";</script>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.02942 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "3 examples, 0 failures";</script>
 </div>
 </div>
 </body>

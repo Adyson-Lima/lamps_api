@@ -21,8 +21,8 @@ RSpec.describe Lamp, type: :model do
   describe "teste de validação do model Lamp" do
 
     it "Lamp valido com campos obrigatorios preenchidos?" do
-      @lamp.lamp_model = ""
-      @lamp.description = ""
+      @lamp.lamp_model = "lampada led"
+      @lamp.description = "lampada de 12W"
       expect(@lamp).to be_valid
     end
 
