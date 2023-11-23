@@ -28,7 +28,7 @@ RSpec.describe Lamp, type: :model do
 
     it "Lamp invalido com campos obrigatorios não preenchidos?" do
       lamp = Lamp.new
-      expect(lamp).to be_valid
+      expect(lamp).to be_invalid
     end
 
   end
